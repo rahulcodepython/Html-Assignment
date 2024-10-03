@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Application</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .summary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Information Form</h1>
+    <form id="userForm">
+        <label for="name">Name (required):</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name" minlength="3" maxlength="20"><br><br>
+
+        <label for="email">Email (required):</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com"><br><br>
+
+        <label for="age">Age (required, 18-100):</label>
+        <input type="number" id="age" name="age" required min="18" max="100"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+        </select><br><br>
+
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Subscribe to Newsletter</label><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" placeholder="Your comments here"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="error" id="errorMessage"></div>
+    <div class="summary" id="summary"></div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

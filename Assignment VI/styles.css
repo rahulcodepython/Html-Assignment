@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.box,
+.hoverBox,
+.message {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.hoverBox {
+    background-color: lightblue;
+}
+
+.message {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
